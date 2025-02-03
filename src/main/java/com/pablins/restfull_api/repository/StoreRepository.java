@@ -19,6 +19,10 @@ public interface StoreRepository extends JpaRepository<Store, Long> {
             "WHERE s.name = :name")
     Optional<Store> findStoreByNameWithJPQL(String name);//Optional porque esperamos que traiga un solo registro o ninguno
 
+    //JPA Query methods: https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html
     //OPCIÓN 2: Consulta con Inversión de Control que nos ofrece Spring Data
     Optional<Store> findByName(String name);
+
+    //OPCIÓN 2.1: Consulta IoC ignorando mayus y minus
+    Optional<Store> findByNameIgnoreCase(String name);
 }

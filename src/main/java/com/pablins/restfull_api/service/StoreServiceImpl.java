@@ -59,6 +59,11 @@ public class StoreServiceImpl implements StoreService {
         return storeRepository.findByName(name);
     }
 
+    @Override
+    public Optional<Store> findByNameIgnoreCase(String name) {
+        return storeRepository.findByNameIgnoreCase(name);
+    }
+
     private boolean isNotNullAndNotEmpty(String value) {
         return Objects.nonNull(value) && !value.isEmpty();
     }

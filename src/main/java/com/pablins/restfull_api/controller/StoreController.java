@@ -30,6 +30,11 @@ public class StoreController {
         return storeService.findByName(name);
     }
 
+    @GetMapping("/findByNameIgnoreCase/{name}")
+    public Optional<Store> findByNameIgnoreCase(@PathVariable String name) {
+        return storeService.findByNameIgnoreCase(name);
+    }
+
     @PostMapping("/save")
     public Store saveStore(@RequestBody Store store) {
         return storeService.saveStore(store);

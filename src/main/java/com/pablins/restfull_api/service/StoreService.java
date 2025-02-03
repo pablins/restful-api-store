@@ -14,5 +14,6 @@ public interface StoreService {
 
     Optional<Store> findStoreByNameWithJPQL(String name);
     Optional<Store> findByName(String name);
+    Optional<Store> findByNameIgnoreCase(String name);
 
 }
