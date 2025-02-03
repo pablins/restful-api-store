@@ -25,6 +25,11 @@ public class StoreController {
         return storeService.findStoreByNameWithJPQL(name);
     }
 
+    @GetMapping("findByName/{name}")
+    public Optional<Store> findByName(@PathVariable String name) {
+        return storeService.findByName(name);
+    }
+
     @PostMapping("/save")
     public Store saveStore(@RequestBody Store store) {
         return storeService.saveStore(store);

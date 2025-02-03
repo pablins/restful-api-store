@@ -54,6 +54,11 @@ public class StoreServiceImpl implements StoreService {
         return storeRepository.findStoreByNameWithJPQL(name);
     }
 
+    @Override
+    public Optional<Store> findByName(String name) {
+        return storeRepository.findByName(name);
+    }
+
     private boolean isNotNullAndNotEmpty(String value) {
         return Objects.nonNull(value) && !value.isEmpty();
     }

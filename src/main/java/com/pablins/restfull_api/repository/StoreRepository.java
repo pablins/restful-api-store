@@ -10,9 +10,15 @@ import java.util.Optional;
 @Repository
 public interface StoreRepository extends JpaRepository<Store, Long> {
 
-    //Obtener registro por su nombre usando JPQL. Util para consultas complejas
+    /*******************************
+     * OBTENER REGISTRO FILTRANDO POR NOMBRE
+     ********************************/
+    //OPCIÓN 1: Utilizando JPQL. Util para consultas complejas
     @Query("SELECT s " +
             "FROM Store s " +//Usamos el nombre de la entidad (como está en Java)
             "WHERE s.name = :name")
     Optional<Store> findStoreByNameWithJPQL(String name);//Optional porque esperamos que traiga un solo registro o ninguno
+
+    //OPCIÓN 2: Consulta con Inversión de Control que nos ofrece Spring Data
+    Optional<Store> findByName(String name);
 }

@@ -13,5 +13,6 @@ public interface StoreService {
     void deleteStore(Long id);
 
     Optional<Store> findStoreByNameWithJPQL(String name);
+    Optional<Store> findByName(String name);
 
 }
