@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 @Service//le indicamos a spring que aquí estará nuestra capa de servicio y la lógica que desarrollaremos
 public class StoreServiceImpl implements StoreService {
@@ -46,6 +47,11 @@ public class StoreServiceImpl implements StoreService {
     @Override
     public void deleteStore(Long id) {
         storeRepository.deleteById(id);
+    }
+
+    @Override
+    public Optional<Store> findStoreByNameWithJPQL(String name) {
+        return storeRepository.findStoreByNameWithJPQL(name);
     }
 
     private boolean isNotNullAndNotEmpty(String value) {

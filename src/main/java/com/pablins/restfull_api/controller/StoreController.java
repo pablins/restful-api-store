@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/store")
@@ -17,6 +18,11 @@ public class StoreController {
     @GetMapping("/findAll")
     public List<Store> findAllStores() {
         return storeService.findAllStores();
+    }
+
+    @GetMapping("/findByNameWithJPQL/{name}")
+    public Optional<Store> findByNameWithJPQL(@PathVariable String name) {
+        return storeService.findStoreByNameWithJPQL(name);
     }
 
     @PostMapping("/save")
