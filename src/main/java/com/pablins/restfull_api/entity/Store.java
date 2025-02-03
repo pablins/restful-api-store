@@ -16,7 +16,8 @@ public class Store {
 
     //Establemos la PK y la forma como se generará
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)//Se basa en una columna de base de datos con incremento automático y permite que la base de datos genere un nuevo valor con cada operación de inserción (AUTOINCREMENT)
+    //Se basa en una columna de base de datos con incremento automático y permite que la base de datos genere un nuevo valor con cada operación de inserción (AUTOINCREMENT)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String floor;
