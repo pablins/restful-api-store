@@ -1,6 +1,7 @@
 package com.pablins.restfull_api.service;
 
 import com.pablins.restfull_api.entity.Store;
+import com.pablins.restfull_api.error.StoreNotFoundException;
 import com.pablins.restfull_api.repository.StoreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -62,6 +63,17 @@ public class StoreServiceImpl implements StoreService {
     @Override
     public Optional<Store> findByNameIgnoreCase(String name) {
         return storeRepository.findByNameIgnoreCase(name);
+    }
+
+    @Override
+    public Store findStoreById(Long id) throws StoreNotFoundException {//exception que posiblemente podría arrojarse
+        Optional<Store> store = storeRepository.findById(id);
+
+        if(!store.isPresent()) {//Cuando no encuentre un store por el ID buscado, lanzamos la exception personalizada
+            throw new StoreNotFoundException("Store is not available");
+        }
+
+        return store.get();
     }
 
     private boolean isNotNullAndNotEmpty(String value) {

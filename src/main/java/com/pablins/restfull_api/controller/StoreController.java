@@ -1,6 +1,7 @@
 package com.pablins.restfull_api.controller;
 
 import com.pablins.restfull_api.entity.Store;
+import com.pablins.restfull_api.error.StoreNotFoundException;
 import com.pablins.restfull_api.service.StoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -33,6 +34,11 @@ public class StoreController {
     @GetMapping("/findByNameIgnoreCase/{name}")
     public Optional<Store> findByNameIgnoreCase(@PathVariable String name) {
         return storeService.findByNameIgnoreCase(name);
+    }
+
+    @GetMapping("findById/{id}")
+    public Store findById(@PathVariable Long id) throws StoreNotFoundException {//Esta será controlada por @ControllerAdvice que es la clase RestResponseEntityExceptionHandler
+        return storeService.findStoreById(id);
     }
 
     @PostMapping("/save")

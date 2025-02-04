@@ -1,6 +1,7 @@
 package com.pablins.restfull_api.service;
 
 import com.pablins.restfull_api.entity.Store;
+import com.pablins.restfull_api.error.StoreNotFoundException;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,4 +17,5 @@ public interface StoreService {
     Optional<Store> findByName(String name);
     Optional<Store> findByNameIgnoreCase(String name);
 
+    Store findStoreById(Long id) throws StoreNotFoundException;
 }
