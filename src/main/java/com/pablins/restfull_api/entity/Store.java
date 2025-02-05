@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 @Entity//Le decimos a spring que esta clase (entidad) tiene que mapearse a la DB
-@Table(name = "stores")//Forma en la que se mapeará y asignamos nombre (Estandar DB debe ser en minusculas y plural).
+@Table(name = "tb_stores")//Forma en la que se mapeará y asignamos nombre (Estandar DB debe ser en minusculas y plural).
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
