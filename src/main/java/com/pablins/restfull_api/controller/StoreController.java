@@ -37,7 +37,7 @@ public class StoreController {
         return storeService.findByNameIgnoreCase(name);
     }
 
-    @GetMapping("findById/{id}")
+    @GetMapping("/findById/{id}")
     public Store findById(@PathVariable Long id) throws StoreNotFoundException {//Esta será controlada por @ControllerAdvice que es la clase RestResponseEntityExceptionHandler
         return storeService.findStoreById(id);
     }
