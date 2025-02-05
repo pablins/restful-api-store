@@ -3,6 +3,7 @@ package com.pablins.restfull_api.controller;
 import com.pablins.restfull_api.entity.Store;
 import com.pablins.restfull_api.error.StoreNotFoundException;
 import com.pablins.restfull_api.service.StoreService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -42,7 +43,7 @@ public class StoreController {
     }
 
     @PostMapping("/save")
-    public Store saveStore(@RequestBody Store store) {
+    public Store saveStore(@Valid @RequestBody Store store) {
         return storeService.saveStore(store);
     }
 
