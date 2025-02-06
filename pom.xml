@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.pablins</groupId>
 	<artifactId>restfull-api</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>restfull-api</name>
 	<description>Initialization with Spring Boot</description>
 	<url/>

@@ -3,7 +3,7 @@ server:
 #Establecemos el perfil que dejaremos activo (será el documento con la configuración para ambiente DEV)
 spring:
     profiles:
-        active: dev
+        active: prd
 
 ---
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -26,7 +26,7 @@ spring:
 
 ---
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#DOCUMENTO 1: PERFIL "qa"
+#DOCUMENTO 3: PERFIL "qa"
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 spring:
     config:
@@ -37,6 +37,25 @@ spring:
     datasource:
         password: admin
         url: jdbc:postgresql://localhost:5432/db_restfulapi_qa
+        username: postgres
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+
+---
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#DOCUMENTO 4: PERFIL "prd"
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+spring:
+    config:
+        active:
+            on-profile: prd
+    application:
+        name: restfull-api
+    datasource:
+        password: admin
+        url: jdbc:postgresql://localhost:5432/db_restfulapi_prd
         username: postgres
     jpa:
         hibernate:
