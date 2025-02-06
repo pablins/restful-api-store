@@ -61,3 +61,22 @@ spring:
         hibernate:
             ddl-auto: update
         show-sql: true
+
+---
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#DOCUMENTO 5: PERFIL "prd-mysql"
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+spring:
+    config:
+        active:
+            on-profile: prd-mysql
+    application:
+        name: restfull-api
+    datasource:
+        password:
+        url: jdbc:mysql://localhost:3306/db_restfulapi_prd
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
