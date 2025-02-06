@@ -11,7 +11,7 @@ spring:
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 spring:
     config:
-        active:
+        activate:
             on-profile: dev
     application:
         name: restful-api
@@ -30,7 +30,7 @@ spring:
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 spring:
     config:
-        active:
+        activate:
             on-profile: qa
     application:
         name: restful-api
@@ -49,7 +49,7 @@ spring:
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 spring:
     config:
-        active:
+        activate:
             on-profile: prd
     application:
         name: restful-api
@@ -68,7 +68,7 @@ spring:
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 spring:
     config:
-        active:
+        activate:
             on-profile: prd-mysql
     application:
         name: restful-api
