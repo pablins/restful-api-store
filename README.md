@@ -27,6 +27,8 @@ Este proyecto implementa una API RESTful para gestionar tiendas (`Store`). La ap
 
 La API permite realizar operaciones CRUD sobre la entidad `Store`, incluyendo búsquedas por nombre, ID y otras funcionalidades adicionales.
 
+###### <sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub>
+
 ---
 
 ## Características Principales
@@ -36,6 +38,8 @@ La API permite realizar operaciones CRUD sobre la entidad `Store`, incluyendo b�
 - **Validaciones**: Validaciones básicas utilizando anotaciones de **Hibernate Validator**.
 - **Manejo de Errores**: Manejo centralizado usando `@ControllerAdvice` de errores con mensajes personalizados.
 - **Perfiles de Configuración**: Soporte para múltiples entornos (`dev`, `qa`, `prd`, `prd-mysql`) mediante archivos YAML.
+
+###### <sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub>
 
 ---
 
@@ -56,6 +60,8 @@ src/
 │ ├── application.yml                     # Configuración principal
 └── test/                                 # Pruebas unitarias
 ```
+
+###### <sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub>
 
 ---
 
@@ -79,9 +85,12 @@ Asegúrate de tener las siguientes dependencias instaladas:
 
 - **Java 21**
 - **Maven**
+- **H2**
 - **PostgreSQL** o **MySQL** (según el perfil activo)
 
-## Cómo Ejecutar el Proyecto
+---
+
+### Cómo Ejecutar el Proyecto
 
 **1. Clonar el Repositorio:**
 
@@ -92,7 +101,7 @@ Asegúrate de tener las siguientes dependencias instaladas:
 
 **2. Configurar el Perfil Activo:**
 
-  Edita el archivo `application.yml` y establece el perfil activo (`dev`, `qa`, `prd`, `prd-mysql`).
+  Edita el archivo `application.yml` y establece el perfil activo (`dev`, `qa`, `prd`, `prd-mysql`). **IMPORTANTE:** Verifica la configuración de la conexión a la base de datos según el perfil que selecciones y crea la DataBase en tu Sistema de Gestión de Base de Datos
 
 **3. Construir el Proyecto:**
    
@@ -101,14 +110,18 @@ Asegúrate de tener las siguientes dependencias instaladas:
   ```
 
 **4. Ejecutar la Aplicación:**
+
+  *OPCIÓN 1:*
    
   ```bash
   mvn spring-boot:run
   ```
 
+  *OPCIÓN 2:*
   En caso de querer usar un perfil diferente al establecido en el `application.yml` podrias realizar el siguiente script:
 
   ```bash
+  cd target
   java -jar restful-api-1.0.0.jar --spring.profiles.active=prd
   ```
 
@@ -116,7 +129,9 @@ Asegúrate de tener las siguientes dependencias instaladas:
    
   La API estará disponible en `http://localhost:8080/api/store`
 
-## Endpoints Disponibles
+---
+
+### Endpoints Disponibles
 
 
 |MÉTODO HTTP | ENDPOINT | DESCRIPCIÓN |
@@ -131,7 +146,7 @@ Asegúrate de tener las siguientes dependencias instaladas:
 
 ---
 
-## Validaciones
+### Validaciones
 
 La entidad `Store` incluye validaciones para garantizar la integridad de los datos:
 
@@ -140,9 +155,13 @@ La entidad `Store` incluye validaciones para garantizar la integridad de los dat
 
 ---
 
-## Errores Personalizados
+### Errores Personalizados
 
 La clase `RestResponseEntityExceptionHandler` maneja errores globales, como cuando no se encuentra una tienda (`StoreNotFoundException`), devolviendo respuestas JSON claras y consistentes.
+
+###### <sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub>
+
+---
 
 ## Dependencias
 
@@ -155,6 +174,10 @@ Las principales dependencias del proyecto son:
 - H2
 - Lombok
 
+###### <sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub>
+
+---
+
 ## Contribuciones
 Si deseas contribuir al proyecto, sigue estos pasos:
 
@@ -164,5 +187,16 @@ Si deseas contribuir al proyecto, sigue estos pasos:
 4. Sube tus cambios (`git push origin feature/nueva-funcionalidad`).
 5. Abre un Pull Request.
 
+###### <sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub>
+
+---
+
 ## Licencia
 Este proyecto está bajo la licencia **MIT** . Consulta el archivo `LICENSE` para más detalles.
+
+###### <sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub>
+
+---
+
+## Autor 👨‍💻
+Made with 💓 by [pablins6101](https://x.com/pablins6101)
