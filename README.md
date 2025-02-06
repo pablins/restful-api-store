@@ -27,7 +27,7 @@ Este proyecto implementa una API RESTful para gestionar tiendas (`Store`). La ap
 
 La API permite realizar operaciones CRUD sobre la entidad `Store`, incluyendo búsquedas por nombre, ID y otras funcionalidades adicionales.
 
-###### <sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub>
+<sub><sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub></sub>
 
 ---
 
@@ -39,7 +39,7 @@ La API permite realizar operaciones CRUD sobre la entidad `Store`, incluyendo b�
 - **Manejo de Errores**: Manejo centralizado usando `@ControllerAdvice` de errores con mensajes personalizados.
 - **Perfiles de Configuración**: Soporte para múltiples entornos (`dev`, `qa`, `prd`, `prd-mysql`) mediante archivos YAML.
 
-###### <sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub>
+<sub><sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub></sub>
 
 ---
 
@@ -47,7 +47,7 @@ La API permite realizar operaciones CRUD sobre la entidad `Store`, incluyendo b�
 
 El proyecto sigue una arquitectura basada en capas:
 
-```bash
+```plain text
 src/
 ├── main/
 │ ├── java/com/pablins/restful_api/
@@ -61,7 +61,7 @@ src/
 └── test/                                 # Pruebas unitarias
 ```
 
-###### <sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub>
+<sub><sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub></sub>
 
 ---
 
@@ -111,7 +111,7 @@ Asegúrate de tener las siguientes dependencias instaladas:
 
 **4. Ejecutar la Aplicación:**
 
-  *OPCIÓN 1:*
+  *OPCIÓN 1:* Ejecutar con la configuración realizada en archivo `application.yml`
    
   ```bash
   mvn spring-boot:run
@@ -159,7 +159,7 @@ La entidad `Store` incluye validaciones para garantizar la integridad de los dat
 
 La clase `RestResponseEntityExceptionHandler` maneja errores globales, como cuando no se encuentra una tienda (`StoreNotFoundException`), devolviendo respuestas JSON claras y consistentes.
 
-###### <sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub>
+<sub><sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub></sub>
 
 ---
 
@@ -174,7 +174,7 @@ Las principales dependencias del proyecto son:
 - H2
 - Lombok
 
-###### <sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub>
+<sub><sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub></sub>
 
 ---
 
@@ -187,14 +187,14 @@ Si deseas contribuir al proyecto, sigue estos pasos:
 4. Sube tus cambios (`git push origin feature/nueva-funcionalidad`).
 5. Abre un Pull Request.
 
-###### <sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub>
+<sub><sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub></sub>
 
 ---
 
 ## Licencia
 Este proyecto está bajo la licencia **MIT** . Consulta el archivo `LICENSE` para más detalles.
 
-###### <sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub>
+<sub><sub>[VOLVER AL INICIO](#tabla-de-contenidos)</sub></sub>
 
 ---
 
