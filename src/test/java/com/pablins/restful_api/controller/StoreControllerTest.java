@@ -1,8 +1,7 @@
-package com.pablins.restfull_api.controller;
+package com.pablins.restful_api.controller;
 
-import com.pablins.restfull_api.entity.Store;
-import com.pablins.restfull_api.error.StoreNotFoundException;
-import com.pablins.restfull_api.service.StoreService;
+import com.pablins.restful_api.entity.Store;
+import com.pablins.restful_api.service.StoreService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -12,7 +11,6 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 //Pasamos como parametro el controlador

@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.pablins</groupId>
-	<artifactId>restfull-api</artifactId>
+	<artifactId>restful-api</artifactId>
 	<version>1.0.0</version>
-	<name>restfull-api</name>
+	<name>restful-api</name>
 	<description>Initialization with Spring Boot</description>
 	<url/>
 	<licenses>

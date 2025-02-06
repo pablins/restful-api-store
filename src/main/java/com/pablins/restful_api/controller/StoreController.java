@@ -1,8 +1,8 @@
-package com.pablins.restfull_api.controller;
+package com.pablins.restful_api.controller;
 
-import com.pablins.restfull_api.entity.Store;
-import com.pablins.restfull_api.error.StoreNotFoundException;
-import com.pablins.restfull_api.service.StoreService;
+import com.pablins.restful_api.entity.Store;
+import com.pablins.restful_api.error.StoreNotFoundException;
+import com.pablins.restful_api.service.StoreService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

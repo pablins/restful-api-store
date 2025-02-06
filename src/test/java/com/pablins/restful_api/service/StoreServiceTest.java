@@ -1,14 +1,13 @@
-package com.pablins.restfull_api.service;
+package com.pablins.restful_api.service;
 
-import com.pablins.restfull_api.entity.Store;
-import com.pablins.restfull_api.repository.StoreRepository;
+import com.pablins.restful_api.entity.Store;
+import com.pablins.restful_api.repository.StoreRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 import java.util.Optional;

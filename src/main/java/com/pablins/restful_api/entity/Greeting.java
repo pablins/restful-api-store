@@ -1,4 +1,4 @@
-package com.pablins.restfull_api.entity;
+package com.pablins.restful_api.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

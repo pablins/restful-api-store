@@ -14,7 +14,7 @@ spring:
         active:
             on-profile: dev
     application:
-        name: restfull-api
+        name: restful-api
     datasource:
         password: admin
         url: jdbc:postgresql://localhost:5432/db_restfulapi
@@ -33,7 +33,7 @@ spring:
         active:
             on-profile: qa
     application:
-        name: restfull-api
+        name: restful-api
     datasource:
         password: admin
         url: jdbc:postgresql://localhost:5432/db_restfulapi_qa
@@ -52,7 +52,7 @@ spring:
         active:
             on-profile: prd
     application:
-        name: restfull-api
+        name: restful-api
     datasource:
         password: admin
         url: jdbc:postgresql://localhost:5432/db_restfulapi_prd
@@ -71,7 +71,7 @@ spring:
         active:
             on-profile: prd-mysql
     application:
-        name: restfull-api
+        name: restful-api
     datasource:
         password:
         url: jdbc:mysql://localhost:3306/db_restfulapi_prd

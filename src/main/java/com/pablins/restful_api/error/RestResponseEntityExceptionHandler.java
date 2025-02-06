@@ -1,6 +1,6 @@
-package com.pablins.restfull_api.error;
+package com.pablins.restful_api.error;
 
-import com.pablins.restfull_api.error.dto.ErrorMessage;
+import com.pablins.restful_api.error.dto.ErrorMessage;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;

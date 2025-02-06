@@ -1,6 +1,6 @@
-package com.pablins.restfull_api.repository;
+package com.pablins.restful_api.repository;
 
-import com.pablins.restfull_api.entity.Store;
+import com.pablins.restful_api.entity.Store;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

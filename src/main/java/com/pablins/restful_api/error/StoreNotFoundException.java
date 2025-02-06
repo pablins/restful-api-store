@@ -1,4 +1,4 @@
-package com.pablins.restfull_api.error;
+package com.pablins.restful_api.error;
 
 public class StoreNotFoundException extends Exception {
 

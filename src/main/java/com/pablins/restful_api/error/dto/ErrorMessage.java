@@ -1,4 +1,4 @@
-package com.pablins.restfull_api.error.dto;
+package com.pablins.restful_api.error.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

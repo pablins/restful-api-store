@@ -1,7 +1,7 @@
-package com.pablins.restfull_api.service;
+package com.pablins.restful_api.service;
 
-import com.pablins.restfull_api.entity.Store;
-import com.pablins.restfull_api.error.StoreNotFoundException;
+import com.pablins.restful_api.entity.Store;
+import com.pablins.restful_api.error.StoreNotFoundException;
 
 import java.util.List;
 import java.util.Optional;

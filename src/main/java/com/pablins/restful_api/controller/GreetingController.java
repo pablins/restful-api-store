@@ -1,6 +1,6 @@
-package com.pablins.restfull_api.controller;
+package com.pablins.restful_api.controller;
 
-import com.pablins.restfull_api.entity.Greeting;
+import com.pablins.restful_api.entity.Greeting;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

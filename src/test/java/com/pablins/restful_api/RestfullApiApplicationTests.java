@@ -1,4 +1,4 @@
-package com.pablins.restfull_api;
+package com.pablins.restful_api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
