@@ -1,0 +1,44 @@
+server:
+    port: 8080
+#Establecemos el perfil que dejaremos activo (será el documento con la configuración para ambiente DEV)
+spring:
+    profiles:
+        active: dev
+
+---
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#DOCUMENTO 2: PERFIL "dev"
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+spring:
+    config:
+        active:
+            on-profile: dev
+    application:
+        name: restfull-api
+    datasource:
+        password: admin
+        url: jdbc:postgresql://localhost:5432/db_restfulapi
+        username: postgres
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+
+---
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#DOCUMENTO 1: PERFIL "qa"
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+spring:
+    config:
+        active:
+            on-profile: qa
+    application:
+        name: restfull-api
+    datasource:
+        password: admin
+        url: jdbc:postgresql://localhost:5432/db_restfulapi_qa
+        username: postgres
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
